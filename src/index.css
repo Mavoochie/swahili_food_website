@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ── Swahili Coastal Palette ── */
+  --bg:           #F5F5DC;   /* Coconut Cream            */
+  --bg2:          #ede9c8;   /* slightly deeper cream    */
+  --bg3:          #e3ddb0;   /* warm parchment           */
+  --surface:      #ffffff;   /* clean white cards        */
+  --border:       #d8d1a8;   /* aged coconut             */
+
+  --gold:         #D4A017;   /* Turmeric Gold — primary accent   */
+  --gold-dark:    #a87c10;   /* deeper turmeric          */
+  --gold-light:   #f5e9b8;   /* pale gold tint           */
+  --orange:       #E97451;   /* Roasted Orange — secondary accent */
+  --orange-dark:  #c05a38;   /* deeper roast             */
+  --orange-light: #faeae4;   /* pale orange tint         */
+
+  --text:         #6B4226;   /* Spiced Brown — headers & text    */
+  --text-mid:     #8a5a35;   /* mid brown                */
+  --text-muted:   #a07850;   /* light spice              */
+
+  --green:        #228B22;   /* Herb Green — hover & highlight   */
+  --green-light:  #e8f5e8;   /* pale herb tint           */
+  --clove:        #2F4F4F;   /* Clove Dark — nav & footer        */
+  --clove-mid:    #3d6363;   /* lighter clove            */
+
+  --success:      #228B22;
+  --danger:       #c0392b;
+
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 100% 50% at 50% 0%,
+      rgba(212,160,23,0.07) 0%, transparent 60%);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0 0 0.4em;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+a {
+  color: var(--clove);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--green); }
+
+button {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1.5px solid transparent;
+  border-radius: 4px;
+  padding: 0.55em 1.4em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+input, textarea {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  padding: 0.65em 1em;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+input::placeholder { color: var(--text-muted); }
+input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,160,23,0.15);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
